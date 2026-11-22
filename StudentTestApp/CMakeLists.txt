@@ -4,7 +4,6 @@ project(VideoApp VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Добавляем все необходимые модули
 find_package(Qt6 REQUIRED COMPONENTS Quick QuickControls2 QuickLayouts Multimedia)
 
 qt_standard_project_setup(REQUIRES 6.10)
@@ -26,7 +25,6 @@ set_target_properties(appVideoApp PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
-# Линкуем все модули
 target_link_libraries(appVideoApp
     PRIVATE Qt6::Quick Qt6::QuickControls2 Qt6::QuickLayouts Qt6::Multimedia
 )
